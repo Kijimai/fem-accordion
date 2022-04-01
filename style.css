@@ -1,0 +1,77 @@
+:root {
+  --color-white: 0 0% 100%;
+  --color-dark: 0 0% 15%;
+
+  --very-dark-desaturated-blue: 238 29% 16%;
+  --soft-red: 14 88% 65%;
+
+  --bg-soft-violet: 273 75% 66%;
+  --bg-soft-blue: 240 73% 65%;
+
+  --very-dark-grayish-blue: 237 12% 33%;
+  --dark-grayish-blue: 240 6% 50%;
+
+  --light-grayish-blue: 240 5% 91%;
+  --default-font-size: 62.5%;
+}
+
+html {
+  font-size: var(--default-font-size);
+}
+
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--bg-soft-blue)),
+    hsl(var(--bg-soft-violet))
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-main-container {
+  position: relative;
+  background-color: hsl(var(--color-white));
+  height: 20rem;
+}
